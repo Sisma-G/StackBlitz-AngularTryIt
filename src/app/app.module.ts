@@ -15,7 +15,8 @@ import { ProductDetailsComponent } from "./product-details/product-details.compo
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
-      { path: "products/:productId", component: ProductDetailsComponent } //why the ":"?
+      { path: "products/:productId", component: ProductDetailsComponent }
+      //why the ":"^ is it because it's a variable?
     ])
   ],
   declarations: [
