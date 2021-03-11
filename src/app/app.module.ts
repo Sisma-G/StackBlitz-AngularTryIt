@@ -16,7 +16,7 @@ import { ProductDetailsComponent } from "./product-details/product-details.compo
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailsComponent }
-      //why the ":"^ is it because it's a variable?
+      //why the ":"? is it because it's a variable?
     ])
   ],
   declarations: [
