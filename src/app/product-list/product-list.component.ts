@@ -11,6 +11,7 @@ export class ProductListComponent {
   products = products;
 
   share() {
+    //Prompt a page alert with a message
     window.alert('The product has been shared!');
   }
 }

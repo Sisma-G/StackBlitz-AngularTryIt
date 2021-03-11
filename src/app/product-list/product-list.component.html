@@ -1,12 +1,26 @@
 <h2>Products</h2>
 
+<!-- iterate over the list of products with *ngFor directive on a <div> -->
 <div *ngFor="let product of products">
   <h3>
-    {{ product.name }}
+    <!-- make product names also be links -->
+    <!-- property binding [ ] lets you use the property value in a template expression -->
+    <!-- title is the title of the link, which is displayed by hovering-->
+    <a [title]="product.name + ' details'">
+      <!-- actual name diplayed -->
+      {{ product.name }}
+    </a>
   </h3>
+
+  <!-- p element is only created if there is a description -->
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <!-- create a clickable button -->
+  <!-- bind the click event with () around it to the share() method defined in the component-->
+  <button (click)="share()">
+    Share
+  </button>
+
 </div>
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->
