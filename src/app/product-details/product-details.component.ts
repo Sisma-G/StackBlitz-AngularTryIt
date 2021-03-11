@@ -15,5 +15,10 @@ export class ProductDetailsComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    //  subscribe to route parameters and fetch the product based on the productId.
+    this.route.paramMap.subscribe(params => {
+      this.product = products[+params.get("productId")];
+    });
+  }
 }
