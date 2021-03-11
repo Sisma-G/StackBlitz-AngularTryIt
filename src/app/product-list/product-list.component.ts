@@ -8,7 +8,7 @@ import { products } from "../products";
   styleUrls: ["./product-list.component.css"]
 })
 export class ProductListComponent {
-  products = products;
+  products = products; //dafuq does that mean?
 
   share() {
     //Prompt a page alert with a message

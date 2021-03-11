@@ -1,12 +1,14 @@
 <h2>Products</h2>
 
 <!-- iterate over the list of products with *ngFor directive on a <div> -->
-<div *ngFor="let product of products">
+<div *ngFor="let product of products; index as productId">
   <h3>
     <!-- make product names also be links -->
     <!-- property binding [ ] lets you use the property value in a template expression -->
     <!-- title is the title of the link, which is displayed by hovering-->
-    <a [title]="product.name + ' details'">
+    <!-- routerLink allows you to link to specific routes in your app. 
+    if the link is dynamic you pass an array of link segments without need for /-->
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
       <!-- actual name diplayed -->
       {{ product.name }}
     </a>
